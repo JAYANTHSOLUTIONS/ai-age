@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 graph = build_graph()
 
+# CORS settings for dev - open to all origins
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
